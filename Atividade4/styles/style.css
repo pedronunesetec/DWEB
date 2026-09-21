@@ -1,0 +1,162 @@
+@import url('https://googleapis.com');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --corprincipal: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    line-height: 1.6;
+    color: #160c0c;
+    background-color: var(--corprincipal);
+    /* Adicionado espaçamento à esquerda para o conteúdo não ficar por baixo do menu */
+    padding-left: 220px; 
+}
+
+/* --- BARRA DE NAVEGAÇÃO LATERAL --- */
+.header-1 {
+    background-color: #aa5d5d;
+    color: #ffffff;
+    padding: 30px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;        /* Largura fixa da barra lateral */
+    height: 100vh;       /* Ocupa 100% da altura da tela */
+    z-index: 1000;
+}
+
+.nav {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-logo {
+    color: var(--corprincipal);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    display: block;      /* Mudado de float para block */
+    margin-bottom: 40px; /* Espaço abaixo da logo */
+}
+
+.nav-list {
+    list-style: none;
+}
+
+.nav-item {
+    display: block;      /* Mudado de inline-block para block para empilhar os links */
+    margin-left: 0;      /* Removido a margem esquerda */
+    margin-bottom: 15px; /* Espaço entre os itens da lista */
+}
+
+.nav-link {
+    color: var(--corprincipal);
+    text-decoration: none;
+    padding: 8px 12px;
+    display: block;      /* Garante que o hover ocupe o bloco todo do item */
+    transition: all 0.3s ease;
+}
+
+.nav-link.active,
+.nav-link:hover {
+    color: #aa5d5d;
+    background-color: #ffffff;
+    border-radius: 3px;
+}
+
+/* --- SEÇÕES DO CONTEÚDO --- */
+section {
+    padding: 80px 0;
+    width: 100%;
+    max-width: 960px; /* Ajustado para max-width para melhor adaptação */
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 28px;
+    color: #aa5d5d;
+}
+
+/* IMPLEMENTAÇÃO DO FLEXBOX AQUI */
+.title {
+    margin-top: 60px;
+    display: flex;                  /* Ativa o Flexbox no elemento pai */
+    justify-content: space-between; /* Espaça o texto e a imagem nas extremidades */
+    align-items: center;            /* Alinha verticalmente o texto e a imagem ao centro */
+    gap: 20px;                      /* Cria um espaço seguro entre o texto e a imagem */
+}
+
+.title-data {
+    flex: 1;                        /* Faz o texto ocupar o espaço disponível de forma flexível */
+    max-width: 500px;               /* Limita a largura máxima do texto */
+}
+
+.title-img { 
+    flex: 0 0 400px;                /* Define uma largura base fixa de 400px para a área da imagem */
+    text-align: center; 
+} 
+
+.title-img img { 
+    width: 300px; 
+    height: 300px; 
+    border-radius: 0; 
+    object-fit: cover; 
+}
+
+.botton {
+    display: inline-block;
+    background-color: #aa5d5d;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.container-box {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns:auto;
+    grid-template-rows: 50px 100px 150px;
+    grid-template-areas:
+         'a1 b2 c3'      
+}
+
+.Notícia {
+    background-color: #aa5d5d;
+    border-radius: 5px;
+}
+
+.a1 {
+    grid-area: a;
+    text-align: left;
+}
+
+.b2 {
+    grid-area: b;
+}
+
+.c3 {
+    grid-area: c;
+}
+
+.centralizar-imagem {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px; 
+}
