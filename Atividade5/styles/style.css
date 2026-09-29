@@ -1,0 +1,79 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+
+div{
+    background-color: dimgray;
+    width: 500px;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    h2::before{
+        content: "Sem Cor (Na noite mais densa...)";
+    }
+}
+
+@media (max-width:420px){
+    div{
+        background-color: rgb(0, 0, 120);
+        h2::before{
+            content:"AZUL FAAAAAAAAAAAAAAAAH (420px)";
+        }
+    }
+}
+
+@media (min-width:421px) and (max-width:768px){
+    div{
+        background-color: rgb(214, 143, 10);
+        h2::before{
+            content:"LARANJA DE POLITICO (768px)";
+        }
+    }
+}
+
+@media (min-width:769px) and (max-width:1024px){
+    div{
+        background-color: rgb(236, 7, 202);
+        h2::before{
+            content:"ROSA KIRBY E A TERRA PERDIDA(Kirby MST)(1024px)";
+        }
+    }
+}
+
+@media (min-width:1024px) and (max-width:1080px){
+    div{
+        background-color: rgb(236, 54, 54);
+        h2::before{
+            content:"VERMELHO PRERIGO! PRE!-RI!-GO!(1080px)";
+        }
+    }
+}
+
+@media (min-width:1081px) and (max-width:1366px){
+    div{
+        background-color: rgb(125, 45, 239);
+        h2::before{
+            content:"AZUL DESBOTADO IGUAL AS SUAS ROUPAS(1366px)";
+        }
+    }
+}
+
+@media (min-width:1367px) and (max-width:1920px){
+    div{
+        background-color: rgb(229, 208, 19);
+        h2::before{
+            content:"AMARELO OURO ROUBADO DE NÓS PELOS PORTUGUESES(1366px)";
+        }
+    }
+}
+
+@media (min-width:1920px){
+    div{
+        background-color: rgb(32, 162, 60);
+        h2::before{
+            content:"VERDE MOGO NÃO SE SOCIALIZA(1366px)";
+        }
+    }
+}
