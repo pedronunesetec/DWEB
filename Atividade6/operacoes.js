@@ -1,0 +1,12 @@
+    numero1 = prompt("Escreva o primeiro numero:");
+    numero2 = prompt("Escreva o segundo numero:");
+    soma = (parseFloat(numero1)) + (parseFloat(numero2));
+    subtracao = (parseFloat(numero1)) - (parseFloat(numero2));
+    produto = (parseFloat(numero1)) * (parseFloat(numero2));
+    divisao = (parseFloat(numero1)) / (parseFloat(numero2));
+    resto = (parseFloat(numero1)) & (parseFloat(numero2));
+    alert("A soma é: " + soma);
+    alert("A subtração é: " + subtracao);
+    alert("O produto é: " + produto);
+    alert("A divisão é: " + divisao);
+    alert("O resto é: " + resto);
