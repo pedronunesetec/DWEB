@@ -4,7 +4,7 @@
     subtracao = (parseFloat(numero1)) - (parseFloat(numero2));
     produto = (parseFloat(numero1)) * (parseFloat(numero2));
     divisao = (parseFloat(numero1)) / (parseFloat(numero2));
-    resto = (parseFloat(numero1)) & (parseFloat(numero2));
+    resto = (parseFloat(numero1)) % (parseFloat(numero2));
     alert("A soma é: " + soma);
     alert("A subtração é: " + subtracao);
     alert("O produto é: " + produto);
