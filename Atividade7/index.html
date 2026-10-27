@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Pedra, Papel e Tesoura</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #resultado {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pedra, Papel e Tesoura</h1>
+    <p>Escolha sua jogada:</p>
+    <button onclick="jogar('pedra')">Pedra</button>
+    <button onclick="jogar('papel')">Papel</button>
+    <button onclick="jogar('tesoura')">Tesoura</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function getComputerChoice() {
+            const choices = ["pedra", "papel", "tesoura"];
+            const randomIndex = Math.floor(Math.random() * choices.length);
+            return choices[randomIndex];
+        }
+
+        function determineWinner(player, computer) {
+            if (player === computer) {
+                return "Empate!";
+            }
+            if (
+                (player === "pedra" && computer === "tesoura") ||
+                (player === "papel" && computer === "pedra") ||
+                (player === "tesoura" && computer === "papel")
+            ) {
+                return "Você venceu!";
+            }
+            return "Você perdeu!";
+        }
+
+        function jogar(playerChoice) {
+            const computerChoice = getComputerChoice();
+            const resultado = determineWinner(playerChoice, computerChoice);
+            document.getElementById("resultado").innerHTML =
+                `Você escolheu: <b>${playerChoice}</b><br>` +
+                `Computador escolheu: <b>${computerChoice}</b><br>` +
+                `<span>${resultado}</span>`;
+        }
+    </script>
+</body>
+</html>
