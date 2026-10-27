@@ -11,19 +11,37 @@ typedef struct {
 } DadosInteresse;
 
 
+//limpa o lixo do buffer do teclado.
+void limparBuffer() {
+    int c;
+    while ((c = getchar()) != '\n' && c != EOF);
+}
+
+//lê a string e limpa o buffer se necessário.
+void lerString(char *destino, int tamanho) {
+    fgets(destino, tamanho, stdin);
+
+    //se encontrar o \n, remove.
+    if (strchr(destino, '\n')) {
+        destino[strcspn(destino, "\n")] = '\0';
+    } else {
+        // se não encontrar, significa que o utilizador digitou mais do que o tamanho e o buffer ficou sujo.
+        limparBuffer();
+    }
+}
 
 int compararCaseInsensitive(char s1[], char s2[]) {
     int k = 0;
-
     while (s1[k] != '\0' && s2[k] != '\0') {
-    if (tolower((unsigned char)s1[k]) != tolower ((unsigned char)s2[k])) {
-        return 0;
+        if (tolower((unsigned char)s1[k]) != tolower((unsigned char)s2[k])) {
+            return 0;
+        }
+        k++;
     }
-    k++;
-    }
-
-    return (s1[k] == s2[k]);
+    return (tolower((unsigned char)s1[k]) == tolower((unsigned char)s2[k])); // Corrigido para garantir case-insensitivity no fim
 }
+
+
 
 int main()
 {
@@ -32,13 +50,13 @@ int main()
     int total = 0;
     char bufferOpcao[10];
 
-    strcpy(exemplo.nome, "Eduardo");
+    strcpy(exemplo.nome, "NOME HIPOTETICO");
     strcpy(exemplo.faixaetaria, "18");
     strcpy(exemplo.genero, "RPG");
     strcpy(exemplo.estilo, "2D");
     strcpy(exemplo.nomejogo, "OMORI");
 
-
+    //exemplo.
     printf("\n\nInforme os seus gostos relacionados a jogos seguindo o exemplo abaixo:\n");
     printf("\nEXEMPLO:\n\n");
     printf("Nome: %s\n", exemplo.nome);
@@ -48,7 +66,7 @@ int main()
     printf("Nome do Jogo: %s\n", exemplo.nomejogo);
 
 
-    //se��o de cadastro.
+    //seção de cadastro.
     do{
         if (total >= 30){
             printf("\nLimite maximo de 30 cadastros atingido!\n");
@@ -90,6 +108,7 @@ int main()
 
     }   while (total < 30);
 
+    //seção de comparação.
     if(total < 2) {
         printf("E necessario cadastrar pelo menos 2 pessoas para realizar comparacoes.\n");
     } else {
@@ -122,7 +141,7 @@ int main()
 
             contadorComparacoes++;
 
-            //programa pausa a tela a cada 4 comparacoes para n�o lotar.
+            //programa pausa a tela a cada 4 comparacoes para não lotar.
             if (contadorComparacoes % 4 == 0) {
                 printf("(Pressione ENTER para ver mais comparacoes...)");
                 fgets(pausaBuffer, sizeof(pausaBuffer), stdin);
