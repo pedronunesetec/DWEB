@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Cadastro Cliente (Barbearia Santa Rosa)</title>
+</head>
+<body>
+     <header> 
+        <nav>
+    <!-- Grupo da Esquerda: Apenas a logo e o título -->
+    <div class="menu-esquerda">
+        <img id="NavLogo" src="./images/logo.jpg" alt="Logo">
+        <h4><u>Barbearia Santa Rosa</u></h4>
+    </div>
+
+    <!-- Grupo da Direita: Apenas os botões de navegar -->
+    <ul class="menu-direita">
+                <li><a href="PaginaInstitucional.html">Institucional</a></li>
+                <li><a href="LoginCliente.html">Login</a></li>
+                <li><a href="CadastroCliente.html">Cadastro</a></li>
+                <li><a href="#">Agendamento</a></li>
+                <li><a href="#">Patrocinadores</a></li>
+                <li><a href="#">FAQ</a></li>
+    </ul>
+</nav>
+    </header>
+    <main>
+        <section id="CadastroCliente" class="container" style="max-width: 400px; margin: 0 auto;">       
+            <div class="item">
+                <h1 style="text-align: center;">Cadastro Cliente</h1>
+                <form action="/signup" method="POST">
+
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required><br><br>
+
+                <label for="phone">Telefone:</label>
+                <input type="tel" id="phone" name="phone" placeholder="(11) 99999-9999" required><br><br>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Ex: nomealeatorio@gmail.com" required><br><br>
+
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required><br><br>
+
+                <label for="repetir_senha">Repetir Senha:</label>
+                <input type="password" id="repetir_senha" name="confirmar_senha" required><br><br>
+
+                <div class="termos">
+                <input type="checkbox" id="termos" name="termos" required />
+                <span><strong>Li e aceito os termos de uso</strong></span>
+                </div>
+
+                <div style="text-align: center;">
+                    <button type="submit">Criar Conta</button>
+                </div>
+                </form>
+                
+                <div style="text-align: center; margin-top: 15px;">
+                    <p>Já tem conta? <a href="LoginCliente.html"><strong><u>Faça Login</u></strong></a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; "Grupo ATUMALACA.EXE". Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

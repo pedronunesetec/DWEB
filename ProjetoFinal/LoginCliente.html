@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Login Cliente (Barbearia Santa Rosa)</title>
+</head>
+<body>
+     <header> 
+        <nav>
+    <!-- Grupo da Esquerda: Apenas a logo e o título -->
+    <div class="menu-esquerda">
+        <img id="NavLogo" src="./images/logo.jpg" alt="Logo">
+        <h4><u>Barbearia Santa Rosa</u></h4>
+    </div>
+
+    <!-- Grupo da Direita: Apenas os botões de navegar -->
+    <ul class="menu-direita">
+                <li><a href="PaginaInstitucional.html">Institucional</a></li>
+                <li><a href="LoginCliente.html">Login</a></li>
+                <li><a href="CadastroCliente.html">Cadastro</a></li>
+                <li><a href="#">Agendamento</a></li>
+                <li><a href="#">Patrocinadores</a></li>
+                <li><a href="#">FAQ</a></li>
+    </ul>
+</nav>
+    </header>
+    <main>
+        <section id="LoginCliente" style="max-width: 400px; margin: 0 auto;">       
+            <div class="item">
+                <h1 style="text-align: center;">Login Ficha Cliente</h1>
+                <form action="/login" method="POST">
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Ex: nomealeatorio@gmail.com" required><br><br>
+
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required><br><br>
+                
+                <div style="text-align: center;">
+                    <a href="#"><u>Esqueceu sua senha?</u></a>
+                </div>
+
+                <div style="text-align: center;">
+                    <button type="submit">Entrar</button>
+                </div>                
+                </form> 
+                
+                <div style="text-align: center;">
+                    <p>Não tem conta? <a href="CadastroCliente.html"><strong><u>Cadastre-se</u></strong></a></p>
+                </div>                
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; "Grupo ATUMALACA.EXE". Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
